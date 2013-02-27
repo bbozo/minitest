@@ -33,6 +33,8 @@ class ParallelEach
 
   alias find_all select # :nodoc:
 
+  delegate :size, :to => :@queue # :nodoc:
+
   ##
   # Starts N threads that yield each element to your block. Joins the
   # threads at the end.
